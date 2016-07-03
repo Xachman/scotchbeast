@@ -1,0 +1,7 @@
+{
+  "source": "/var/www/sync/sites",
+  "destination": "/var/www/html",
+  "patterns": [
+    ".*"
+  ]
+}

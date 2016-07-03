@@ -5,8 +5,8 @@ Listen 9000
 
 <VirtualHost *:80>
     UseCanonicalName Off
-    VirtualDocumentRoot /var/www/sites/%1
-    <Directory /var/www/sites/%1>
+    VirtualDocumentRoot /var/www/html/%1
+    <Directory /var/www/html/%1>
         Options FollowSymLinks
         AllowOverride All
         Require all granted
@@ -15,13 +15,14 @@ Listen 9000
 
 <VirtualHost *:9000>
     UseCanonicalName Off
-    DocumentRoot /var/www/datamgr
-    <Directory /var/www/datamgr>
+    DocumentRoot /var/www/sync/datamgr
+    <Directory /var/www/sync/datamgr>
         Options FollowSymLinks
         AllowOverride All
         Require all granted
     </Directory>
 </VirtualHost>
+#testdfdsaf d
 EOF
 )
 echo "${VHOST}" > /etc/apache2/sites-available/000-default.conf
@@ -29,6 +30,8 @@ echo "${VHOST}" > /etc/apache2/sites-available/000-default.conf
 sudo a2enmod vhost_alias
 
 service apache2 restart
+
+
 
 # create db for each site in /sites
 
@@ -40,3 +43,5 @@ for f in /var/www/sites/*; do
     fi
 done
 echo "Database creation finished"
+
+sudo echo  "PATH=$PATH:/var/www/sync/bin" >> /etc/environment

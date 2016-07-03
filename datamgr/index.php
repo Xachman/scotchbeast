@@ -1,10 +1,10 @@
 <?php
 /**
  * Data manager utility
- * 
+ *
  * frontend page to select site and set up config details
- * 
- * when it runs it will create a mysql dump of live site data and save it to a tmp file locally
+ *
+ * when it runs it will create a mys sdfdsql dump of live site data and save it to a tmp file locally
  * then exec to selected db
  */
 require 'src/DataManager.php';

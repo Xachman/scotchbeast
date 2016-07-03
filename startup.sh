@@ -6,5 +6,6 @@ echo " "
 echo "      YER UP AND RUNNING "
 echo " "
 echo "      :1080 FOR MAILCATCHER"
-echo "      :9000 FOR DATA TOOL"
+echo "      :9000 FOR DATA TOOL"fdsfdsaffdsa test testset
 echo " "
+fdsfdstetfdsafdssfddsfdsafdstesttestttearsf
